@@ -7,7 +7,7 @@ kubectl create -f https://raw.githubusercontent.com/open-telemetry/opentelemetry
 
 **Get the configmap configuration in a yaml filelike this:**
 
-kubectl create -f https://raw.githubusercontent.com/open-telemetry/opentelemetry-collector/v0.111.0/examples/k8s/otel-config.yaml
+kubectl get configmap otel-collector-conf -o yaml > otel-collector-conf.yaml
 
 **Make the necessary changes in the configuration and run apply command**
 
