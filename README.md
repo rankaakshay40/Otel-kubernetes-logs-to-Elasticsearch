@@ -44,7 +44,14 @@ You should now see logs coming in from your OpenTelemetry Collector.
 
 Now to check the logs in Grafana,
 
-import a dashboard named Elasticsearch logs with elasticsearch as datasource from grafana labs link 
+1. Create a datasource with elasticsearch
+   => Give the name of the datasource
+   => Url as http:// server-ip:9200
+   => Under elasticsearch details , give the index name and other details
+   => Click save and test
+   
+
+2.import a dashboard named Elasticsearch logs with elasticsearch as datasource from grafana labs link 
 
 [https://grafana.com/grafana/dashboards/
 ](url)
@@ -54,7 +61,9 @@ Import the dashboard onto your grafana
 now add the pod, namespace and other variable as needed
 
 For pod variable: Query it as: {"find": "terms", "field": "Resource.k8s.pod.name.keyword"}
+
 for namespace variable query it as:  {"find": "terms", "field": "Resource.k8s.namespace.name.keyword"}
+
 
 Important links:
 
