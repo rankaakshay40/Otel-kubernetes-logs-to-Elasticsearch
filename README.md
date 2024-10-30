@@ -60,7 +60,7 @@ Import the dashboard onto your grafana
 
 now add the pod, namespace and other variable as needed
 
-For pod variable: Query it as: {"find": "terms", "field": "Resource.k8s.pod.name.keyword"}
+For pod variable: Query it as: {"find": "terms", "field": "Resource.k8s.pod.name.keyword"} This is referred from the field names in elasticsearch
 
 for namespace variable query it as:  {"find": "terms", "field": "Resource.k8s.namespace.name.keyword"}
 
